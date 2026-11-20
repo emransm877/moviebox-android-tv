@@ -1,0 +1,52 @@
+<resources>
+<style name="ThemeObsidian" parent="android:style/Theme.Material.NoActionBar">
+<item name="android:fontFamily">sans</item>
+<item name="android:colorAccent">#48e6b0</item>
+<item name="android:colorBackground">#10181e</item>
+<item name="android:textColorPrimary">#f0f5f7</item>
+<item name="android:textColorSecondary">#a2b3be</item>
+<item name="android:windowBackground">#090e12</item>
+<item name="android:windowFullscreen">true</item>
+<item name="android:windowNoTitle">true</item>
+</style>
+<style name="ThemeOrbital" parent="android:style/Theme.Material.NoActionBar">
+<item name="android:fontFamily">sans</item>
+<item name="android:colorAccent">#57d9ff</item>
+<item name="android:colorBackground">#101c30</item>
+<item name="android:textColorPrimary">#edf6ff</item>
+<item name="android:textColorSecondary">#a1b7d0</item>
+<item name="android:windowBackground">#070f20</item>
+<item name="android:windowFullscreen">true</item>
+<item name="android:windowNoTitle">true</item>
+</style>
+<style name="ThemePrism" parent="android:style/Theme.Material.NoActionBar">
+<item name="android:fontFamily">sans</item>
+<item name="android:colorAccent">#bf83ff</item>
+<item name="android:colorBackground">#19142f</item>
+<item name="android:textColorPrimary">#f6f0ff</item>
+<item name="android:textColorSecondary">#beafd2</item>
+<item name="android:windowBackground">#100c20</item>
+<item name="android:windowFullscreen">true</item>
+<item name="android:windowNoTitle">true</item>
+</style>
+<style name="ThemeAurora" parent="android:style/Theme.Material.Light.NoActionBar">
+<item name="android:fontFamily">sans</item>
+<item name="android:colorAccent">#087f5b</item>
+<item name="android:colorBackground">#fafcfb</item>
+<item name="android:textColorPrimary">#142b23</item>
+<item name="android:textColorSecondary">#526e62</item>
+<item name="android:windowBackground">#edf3f0</item>
+<item name="android:windowFullscreen">true</item>
+<item name="android:windowNoTitle">true</item>
+</style>
+<style name="ThemeEclipse" parent="android:style/Theme.Material.NoActionBar">
+<item name="android:fontFamily">sans</item>
+<item name="android:colorAccent">#edc47f</item>
+<item name="android:colorBackground">#18150f</item>
+<item name="android:textColorPrimary">#fbf2df</item>
+<item name="android:textColorSecondary">#c5b394</item>
+<item name="android:windowBackground">#100e0b</item>
+<item name="android:windowFullscreen">true</item>
+<item name="android:windowNoTitle">true</item>
+</style>
+</resources>

@@ -1,0 +1,13 @@
+{
+  "repository": "emransm877/moviebox-android-tv",
+  "project_name": "MovieBox Android TV App",
+  "installed_name": "MovieBox",
+  "application_id": "org.emransm.moviebox.tv",
+  "source_version": "0.1.0",
+  "published_version": "0.1.0",
+  "version_code": 1,
+  "tag": "v0.1.0",
+  "asset": "MovieBox-Android-TV-0.1.0.apk",
+  "minimum_sdk": 23,
+  "certificate_sha256": "5c2759fa8da534debbc37200380670660c1780c7f701000890537e48e7a1614b"
+}

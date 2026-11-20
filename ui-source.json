@@ -1,0 +1,276 @@
+{
+  "sourceProject": "emransm877/moviebox-tizen",
+  "sourceVersion": "0.9.3 source branch",
+  "files": [
+    {
+      "path": "index.html",
+      "sha256": "aa711a74b116aed6666b16f84b861911f8a47e09cce08d2cb28abad25f33cd74",
+      "androidSha256": "3e8165a9ab8777d887d06e3337be034494c3f6d842c763decd1a884d1c16bc62",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "assets/icon.png",
+      "sha256": "376200c4cdda3183713677c8241a1930fea77f8ced1c2e23028a1b026328c679",
+      "androidSha256": "376200c4cdda3183713677c8241a1930fea77f8ced1c2e23028a1b026328c679",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/moviebox-logo-aurora.svg",
+      "sha256": "6c2df3524baf77c994d74033e61b25a200731ab5739484cea43ec4a9bc7c5ffe",
+      "androidSha256": "6c2df3524baf77c994d74033e61b25a200731ab5739484cea43ec4a9bc7c5ffe",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/moviebox-logo-eclipse.svg",
+      "sha256": "ab824833cf88f4d7000248d84f3fa642039261a9f6a65fdd25a34b80feb29651",
+      "androidSha256": "ab824833cf88f4d7000248d84f3fa642039261a9f6a65fdd25a34b80feb29651",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/moviebox-logo-obsidian.svg",
+      "sha256": "3d4facaf1aa52b414a441de903cca32e3f9025d30fcb8d927bbcef8c026301c2",
+      "androidSha256": "3d4facaf1aa52b414a441de903cca32e3f9025d30fcb8d927bbcef8c026301c2",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/moviebox-logo-orbital.svg",
+      "sha256": "cf93e0fedd48b9165aa81456c53f9edf267a253f608afb5134787403ae95a63d",
+      "androidSha256": "cf93e0fedd48b9165aa81456c53f9edf267a253f608afb5134787403ae95a63d",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/moviebox-logo-prism.svg",
+      "sha256": "17b5aea61f8e3e1b5a80e1ecb219a94ed10c633996ec50bede73917537969233",
+      "androidSha256": "17b5aea61f8e3e1b5a80e1ecb219a94ed10c633996ec50bede73917537969233",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/moviebox-logo.svg",
+      "sha256": "911c4993c267bbdd118bc95deddc34268f7ae328d037cad70a7d8a35feecba6f",
+      "androidSha256": "911c4993c267bbdd118bc95deddc34268f7ae328d037cad70a7d8a35feecba6f",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "css/app.css",
+      "sha256": "0ee6de2283ad840f99b248fc9194eabdd4c769703f0aae823e0692be68fa4ed3",
+      "androidSha256": "0ee6de2283ad840f99b248fc9194eabdd4c769703f0aae823e0692be68fa4ed3",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "css/themes.css",
+      "sha256": "1b5508994d9d600d47a68f492b1045cbc4ce19b35c1a89ea4a35c4df862f3236",
+      "androidSha256": "1b5508994d9d600d47a68f492b1045cbc4ce19b35c1a89ea4a35c4df862f3236",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/api.js",
+      "sha256": "aa2a5299e3f9ccc0b57749287c81f197c970043e221867098ea03dbb9321de41",
+      "androidSha256": "cf6006dbfe10b86baeaf2019e1de5d349bfa4a8bc4f0e1c47595eb2c78a21ae0",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/app.js",
+      "sha256": "da5fd64e2c8a00e9eb146311c4dee89935a8db21bc0dde819eb458b35734d9e9",
+      "androidSha256": "7ae3e4c9f15b18b6a02d4c17c1a843d7c1af8f5e86f21d308078565dcc298ad0",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/artwork.js",
+      "sha256": "4e2dd13dde5427792799e5e6c17ea0f88c7b448c017f6d2536bc9df43af1e889",
+      "androidSha256": "4e2dd13dde5427792799e5e6c17ea0f88c7b448c017f6d2536bc9df43af1e889",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/carousel.js",
+      "sha256": "b7a486d2665a4a818c7d3a69342567d70ebc1a0573288d4696b09abf20367747",
+      "androidSha256": "b7a486d2665a4a818c7d3a69342567d70ebc1a0573288d4696b09abf20367747",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/catalogue-cache.js",
+      "sha256": "baab3b13f51deb12e66ac9c2bdad5d596757ae887c59ac3d804aab020bb088f3",
+      "androidSha256": "baab3b13f51deb12e66ac9c2bdad5d596757ae887c59ac3d804aab020bb088f3",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/catalogue-controls.js",
+      "sha256": "30df51ea3ca1458505de95f34af06838718851cd3b05bcad3f180499c24486bf",
+      "androidSha256": "30df51ea3ca1458505de95f34af06838718851cd3b05bcad3f180499c24486bf",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/catalogue.js",
+      "sha256": "7deb73e9cb2c7aba0bdd340307374753500695c79c47ad015498fef98c712ede",
+      "androidSha256": "7deb73e9cb2c7aba0bdd340307374753500695c79c47ad015498fef98c712ede",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/crypto.js",
+      "sha256": "cd5983d3bec97794cc6f432f39dd6cc7d380bea1d3ae97c944e032820151d10d",
+      "androidSha256": "cd5983d3bec97794cc6f432f39dd6cc7d380bea1d3ae97c944e032820151d10d",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/inline-controls.js",
+      "sha256": "f4c4b406ed55393a7126978705d2beb7926c36630039f439ec73d1b865cdd56f",
+      "androidSha256": "58a896ffe6cc76d7eb046bb57bba1463a1edeaf5d0dae5d68c71e71bb8b386f2",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/media-agent-bootstrap.js",
+      "sha256": "1d343cf720df255206b0fcf1cadf806208fc664201772388719598cbb3dc4b6d",
+      "androidSha256": "82335c1960ad402dae098845bb42bc61a58a6f34cbafa1560cbd75b32e477e79",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/media-transport.js",
+      "sha256": "082e2083e1b9b178b56fe1964f90c68d8a6526bbcb1e8813970e080e82ee942c",
+      "androidSha256": "884f63fe700eb0c20d822c5cde0293d9bf43b2f0ceedccb3cf068668bade4bb9",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/navigation.js",
+      "sha256": "22384aff436383d19d8444b8c460b9d50fba9291a6bc2e96394232d782e370b0",
+      "androidSha256": "22384aff436383d19d8444b8c460b9d50fba9291a6bc2e96394232d782e370b0",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/player.js",
+      "sha256": "ac2cd1148df795dbb2a453e14169a4913964f1f6b31243100106dfd77cbaa7eb",
+      "androidSha256": "9fa2092009047bb2d9873cb1fe3d49cffb8810c41d141fa94e9b9cddfd843935",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/releases.js",
+      "sha256": "164fff4335ab0aaae1b6a3a3bbb54de5ce0c9488be77a34a1a05045ce2e9fa73",
+      "androidSha256": "56fa44653989573ade3929b3277215f911db94a2a5ad08102e87b069dbcf2339",
+      "modifiedForPlatform": true
+    },
+    {
+      "path": "js/series-policy.js",
+      "sha256": "131c0995da780d9bf5aa5821ae3ed1da8456dd3f3cf92241f2593974d316379e",
+      "androidSha256": "131c0995da780d9bf5aa5821ae3ed1da8456dd3f3cf92241f2593974d316379e",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/theme-bootstrap.js",
+      "sha256": "8203de4f333d27824bc0933c9f31d8dd469fe753b825b7874083f2193bd669c8",
+      "androidSha256": "8203de4f333d27824bc0933c9f31d8dd469fe753b825b7874083f2193bd669c8",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "js/themes.js",
+      "sha256": "f20a4cf07b3a9da148b9a1eec281914a173542ab13a3f656de90aa1dee9613ff",
+      "androidSha256": "f20a4cf07b3a9da148b9a1eec281914a173542ab13a3f656de90aa1dee9613ff",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/audio-tracks.svg",
+      "sha256": "f16b3b451d9f77396204299250c36b0fbc3756b7862a3d47639faadbdc289b2d",
+      "androidSha256": "f16b3b451d9f77396204299250c36b0fbc3756b7862a3d47639faadbdc289b2d",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/download.svg",
+      "sha256": "263d4d520dfb06a67becf554243edaec3fad37a89b02b7946ba09ed19e8d186a",
+      "androidSha256": "263d4d520dfb06a67becf554243edaec3fad37a89b02b7946ba09ed19e8d186a",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/episodes.svg",
+      "sha256": "a52946d9190ae201331afdeae808774ab21f8c085b817085bb225748b4e9cf2d",
+      "androidSha256": "a52946d9190ae201331afdeae808774ab21f8c085b817085bb225748b4e9cf2d",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/LICENSE.txt",
+      "sha256": "fe68082c44fdf9489b4ebda85f590a5d267435be9afb50d352fab607b246cce8",
+      "androidSha256": "fe68082c44fdf9489b4ebda85f590a5d267435be9afb50d352fab607b246cce8",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/maximize.svg",
+      "sha256": "7c90bdb1ffcd86259006bd8e0b33e5d55062d108a75085b2a0082d58b500613d",
+      "androidSha256": "7c90bdb1ffcd86259006bd8e0b33e5d55062d108a75085b2a0082d58b500613d",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/more-horizontal.svg",
+      "sha256": "af031369d69d9838f5c9799dba660bde28d25ca0629a332421864671162e27c6",
+      "androidSha256": "af031369d69d9838f5c9799dba660bde28d25ca0629a332421864671162e27c6",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/pause.svg",
+      "sha256": "a268ef7ee4df565998851ee559b2b3becd8747699833c1a898c58ccdc49a7be3",
+      "androidSha256": "a268ef7ee4df565998851ee559b2b3becd8747699833c1a898c58ccdc49a7be3",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/play.svg",
+      "sha256": "df0770b785919119d83fd08e5f6befd8fb29d2e0629cadd4a1150dd215401ab7",
+      "androidSha256": "df0770b785919119d83fd08e5f6befd8fb29d2e0629cadd4a1150dd215401ab7",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/settings-outline.svg",
+      "sha256": "d1db6f49cc85cee902c72253e25a7693b3475ee18b1e17958a685f03fb02a1a6",
+      "androidSha256": "d1db6f49cc85cee902c72253e25a7693b3475ee18b1e17958a685f03fb02a1a6",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/skip-back.svg",
+      "sha256": "5b13166552c7313d5ea801fee4e09bafd1d01f8f24cc64e15ab99f2daee036aa",
+      "androidSha256": "5b13166552c7313d5ea801fee4e09bafd1d01f8f24cc64e15ab99f2daee036aa",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/skip-forward.svg",
+      "sha256": "ffcdb3491a77456bb0ec3494ab267918d2a8a09874fedcfce56889dbb9c396b9",
+      "androidSha256": "ffcdb3491a77456bb0ec3494ab267918d2a8a09874fedcfce56889dbb9c396b9",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/SOURCE.json",
+      "sha256": "5f891f1833beb8fd0b9b3d86518f168757f76285ce13beaabc81416cb1385274",
+      "androidSha256": "5f891f1833beb8fd0b9b3d86518f168757f76285ce13beaabc81416cb1385274",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/subtitles.svg",
+      "sha256": "82f8184ef5de42c63ebeaa610693ff442cfa44766fd482e268da565326a10b35",
+      "androidSha256": "82f8184ef5de42c63ebeaa610693ff442cfa44766fd482e268da565326a10b35",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/video-scale-crop.svg",
+      "sha256": "a93a43843fa3caedf3f9c5468000d74294c02129a43a3d4f1116fd6875e60690",
+      "androidSha256": "a93a43843fa3caedf3f9c5468000d74294c02129a43a3d4f1116fd6875e60690",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/video-scale-fit.svg",
+      "sha256": "b304ffb2f27d028d9cd129c87aa8c1042cabb37c214f66fb4205a93a3ff32605",
+      "androidSha256": "b304ffb2f27d028d9cd129c87aa8c1042cabb37c214f66fb4205a93a3ff32605",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/video-scale-stretch.svg",
+      "sha256": "925eb1bc3074b2925449ec460650213ef7a14305278db9d7b7393297209c55e5",
+      "androidSha256": "925eb1bc3074b2925449ec460650213ef7a14305278db9d7b7393297209c55e5",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/volume-high.svg",
+      "sha256": "bbe5a4107f36ab5ddb6194a565a06ba91fe52dc446e1d8c7c961c276ef3bcbae",
+      "androidSha256": "bbe5a4107f36ab5ddb6194a565a06ba91fe52dc446e1d8c7c961c276ef3bcbae",
+      "modifiedForPlatform": false
+    },
+    {
+      "path": "assets/player-icons/volume-mute.svg",
+      "sha256": "0921f104e325fb613bc8cc3f33a2f2fd978b05585b31f2104830dc728a4062df",
+      "androidSha256": "0921f104e325fb613bc8cc3f33a2f2fd978b05585b31f2104830dc728a4062df",
+      "modifiedForPlatform": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+name: Native Android TV checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: android-tv-checks-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check release identity and shared interface hashes
+        run: python tools/check_release.py
+      - uses: actions/setup-java@v4
+        with:
+          distribution: microsoft
+          java-version: '17'
+          cache: gradle
+      - uses: android-actions/setup-android@v3
+      - name: Install build SDK
+        run: sdkmanager 'platforms;android-36' 'build-tools;34.0.0'
+      - name: Verify Gradle wrapper
+        uses: gradle/actions/wrapper-validation@v4
+      - name: Build and check the development app
+        run: bash gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
+      - name: Stage private review files
+        run: |
+          mkdir -p artifacts
+          cp app/build/outputs/apk/debug/app-debug.apk artifacts/MovieBox-Android-TV-0.1.0-debug.apk
+          cd artifacts
+          sha256sum MovieBox-Android-TV-0.1.0-debug.apk > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android-tv-development-review
+          path: artifacts/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: android-tv-check-reports
+          path: app/build/reports/
+
+# This workflow never creates releases or publishes production APKs.

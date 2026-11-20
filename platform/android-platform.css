@@ -1,0 +1,4 @@
+/* Android video is a native Media3 surface below the shared TV interface. */
+html.android-video-open,html.android-video-open body,
+html.android-video-open #player-page{background:transparent!important}
+html.android-video-open #av-player,html.android-video-open #html-player{visibility:hidden!important;background:transparent!important}

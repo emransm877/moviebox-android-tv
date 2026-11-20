@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "apkSha256": "1a9b5445fab47d5034f386fd262b9abeaadd8c1912696df63ddfe1ae4e1bcc5c",
+  "variant": "release",
+  "debuggable": false,
+  "target": "Android TV API 36 x86_64 / 1920x1080",
+  "methods": [
+    "signedPlaybackRemoteSeekingSubtitlesAudioAndSeries",
+    "coldProcessRestoresLibraryAndTheme"
+  ]
+}

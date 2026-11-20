@@ -1,0 +1,11 @@
+.gradle/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+verification/
+app/src/androidTest/assets/fixture.mp4
+release-artifacts/
+*.p12
+*.pem
