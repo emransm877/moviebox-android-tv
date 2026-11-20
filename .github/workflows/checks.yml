@@ -24,13 +24,15 @@ jobs:
           java-version: '17'
           cache: gradle
       - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
       - name: Install build SDK
         run: sdkmanager 'platforms;android-36' 'build-tools;34.0.0'
       - name: Verify Gradle wrapper
         uses: gradle/actions/wrapper-validation@v4
       - name: Build and check the development app
         run: bash gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
-      - name: Stage private review files
+      - name: Stage development review files
         run: |
           mkdir -p artifacts
           cp app/build/outputs/apk/debug/app-debug.apk artifacts/MovieBox-Android-TV-0.1.0-debug.apk
