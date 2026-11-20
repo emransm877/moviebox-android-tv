@@ -102,3 +102,11 @@ Read [contribution guidance](CONTRIBUTING.md), [release notes](CHANGELOG.md),
 [third-party notices](THIRD_PARTY_NOTICES.md) and the [MIT license](LICENSE).
 Source licensing does not grant rights to upstream software, trademarks,
 catalogue content or artwork.
+
+
+## Other MovieBox platforms
+
+[Android phone patch](https://github.com/emransm877/moviebox-android) · [Windows desktop app](https://github.com/emransm877/moviebox-desktop) · [Samsung Tizen TV app](https://github.com/emransm877/moviebox-tizen)
+
+Choose the package for your operating system. These are separate independent
+projects; an APK, Windows EXE and Samsung WGT are not interchangeable.
