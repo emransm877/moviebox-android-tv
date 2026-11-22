@@ -121,7 +121,16 @@ catalogue content or artwork.
 
 ## Other MovieBox platforms
 
-[Android phone patch](https://github.com/emransm877/moviebox-android) · [Windows desktop app](https://github.com/emransm877/moviebox-desktop) · [Samsung Tizen TV app](https://github.com/emransm877/moviebox-tizen)
+| Device | Separate project |
+| --- | --- |
+| Android phone - native client | [MovieBox Android Native](https://github.com/emransm877/moviebox-android-native) |
+| Android phone - reviewed APK patch | [MovieBox Android patch](https://github.com/emransm877/moviebox-android) |
+| Windows PC | [MovieBox Desktop](https://github.com/emransm877/moviebox-desktop) |
+| Samsung Tizen TV | [MovieBox Samsung TV](https://github.com/emransm877/moviebox-tizen) |
+
+The native phone client is independently authored and uses a different APK and
+private library from the reviewed phone patch. This repository provides the
+Android TV / Google TV app; phone packages are not TV-app updates.
 
 Choose the package for your operating system. These are separate independent
 projects; an APK, Windows EXE and Samsung WGT are not interchangeable.
