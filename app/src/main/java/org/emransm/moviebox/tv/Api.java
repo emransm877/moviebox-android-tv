@@ -16,7 +16,7 @@ import javax.net.ssl.HttpsURLConnection;
 public final class Api {
     static final String NATIVE="https://api6.aoneroom.com",PREFIX="/wefeed-mobile-bff";
     static final String WEB="https://h5-api.aoneroom.com/wefeed-h5api-bff";
-    static final String UA="MovieBoxAndroidTV/0.1.0 (Android "+Build.VERSION.RELEASE+"; "+Build.MODEL+")";
+    static final String UA="MovieBoxAndroidTV/0.2.0 (Android "+Build.VERSION.RELEASE+"; "+Build.MODEL+")";
     private volatile String webToken="",nativeToken="";
     private final JSONObject client;
     private final Map<String,JSONObject> resourceContext=new java.util.concurrent.ConcurrentHashMap<>();
@@ -57,7 +57,7 @@ public final class Api {
             if(payload!=null){connection.setDoOutput(true);try(OutputStream output=connection.getOutputStream()){output.write(payload);}}
             int status=connection.getResponseCode();if(status!=200)throw new IOException("Service unavailable (HTTP "+status+"). Try again.");
             String user=connection.getHeaderField("x-user");if(user!=null){String fresh=new JSONObject(user).optString("token");if(nativeApi)nativeToken=fresh;else webToken=fresh;}
-            JSONObject result=new JSONObject(new String(read(connection.getInputStream(),4*1024*1024),StandardCharsets.UTF_8));
+            JSONObject result=new JSONObject(JsonUtf8.decode(read(connection.getInputStream(),4*1024*1024)));
             if(result.optInt("code",0)!=0)throw new IOException(result.optString("message","Service refused this request"));
             return result.has("data")&&!result.isNull("data")?result.get("data"):result;
         }finally{connection.disconnect();}

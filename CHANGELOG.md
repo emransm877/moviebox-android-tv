@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.2.0 - 2026-11-23
+
+- Adds 20 visual themes and bounded 3D poster carousels while preserving the five
+  existing theme identities and saved choices.
+- Adds compact Continue watching cards, sidebar navigation and visual Settings.
+- Restores carousel rotation after manual browsing becomes idle; avoids repeated
+  cover/language editions in the featured queue without removing catalogue entries.
+- Adds a narrow, semi-transparent in-player season/episode dock fitted between
+  the player header and controls, with scrolling confined to the episode list.
+- Preserves Android-native Media3 playback, remote input, keyboard and private
+  library storage. New-theme background restoration follows the canonical palette.
+- Unsupported older WebView providers show upgrade guidance instead of a blank UI.
+- Retains application ID and release signing identity; version code increases to 2.
+
+The interface/native runtime checks were performed
+on an API36 Android TV emulator in the preceding same-source development build;
+physical Android TV hardware remains unverified. Current release build and
+signature checks are recorded separately; no universal compatibility claim is made.
+
 ## 0.1.0 — 2026-11-21
 
 First signed independent Android TV / Google TV preview. Installed name: MovieBox.

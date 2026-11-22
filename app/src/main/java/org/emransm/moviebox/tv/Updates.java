@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 
 /** Optional release metadata checks. No installation or silent APK downloads. */
 final class Updates {
-    static final String REPOSITORY="emransm877/moviebox-android-tv",VERSION="0.1.0";
+    static final String REPOSITORY="emransm877/moviebox-android-tv",VERSION="0.2.0";
     static JSONObject check() throws Exception {
         JSONObject data=new JSONObject(new String(Api.download("https://api.github.com/repos/"+REPOSITORY+"/releases/latest",512*1024),StandardCharsets.UTF_8));
         String tag=data.optString("tag_name");

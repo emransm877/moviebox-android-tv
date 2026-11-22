@@ -22,13 +22,13 @@ def edit(name,old,new):
     path.write_text(text.replace(old,new),encoding='utf-8')
 
 edit('index.html','width=1920, initial-scale=1','width=1920')
-edit('index.html','<script src="js/theme-bootstrap.js"></script>','<script src="js/android-bootstrap.js"></script><script src="js/theme-bootstrap.js"></script>')
+edit('index.html','<script src="js/theme-bootstrap.js"></script>','<script src="js/android-preflight.js"></script><script src="js/android-bootstrap.js"></script><script src="js/theme-bootstrap.js"></script>')
 edit('index.html','<script src="$WEBAPIS/webapis/webapis.js"></script>','')
 edit('index.html','<script src="js/api.js"></script>','<script src="js/api.js"></script><script src="js/android-adapter.js"></script>')
 edit('index.html','</head>','<link rel="stylesheet" href="css/android-platform.css"></head>')
 edit('index.html','Samsung native player','Android Media3 player')
 edit('index.html','Samsung native video','Android native video')
-edit('index.html','Auto uses the TV video player for MP4 sources. The native option remains available for alternate formats and embedded audio tracks.','Android Media3 provides native playback for available sources and supported embedded tracks.')
+edit('index.html','Auto uses the TV player for compatible video.','Android plays compatible video and audio tracks natively.')
 edit('index.html','On your computer, open the release page below and download its TV package. Follow the installation guide for your TV. This app never installs updates automatically.','Open the release page on your phone or computer and download the Android TV APK. Install it using your Android TV’s normal sideloading process. Updates are optional.')
 edit('js/media-agent-bootstrap.js',"  'use strict';","  'use strict';\n  if(global.MovieBoxAndroidEnvironment){global.MovieBoxOriginalMediaAgent=navigator.userAgent;global.MovieBoxMediaUserAgent=global.MovieBoxAndroidEnvironment.userAgent;global.MovieBoxMediaAgentReady=Promise.resolve(true);return;}")
 edit('js/api.js',"this.preview = !root.tizen", "this.preview = !root.MovieBoxAndroidEnvironment && !root.tizen")
@@ -40,11 +40,11 @@ edit('js/media-transport.js',"var web=realTV&&mode", "var web=realTV&&!global.Mo
 edit('js/media-transport.js',"native?'SAMSUNG NATIVE PLAYER'", "native?(global.MovieBoxAndroidEnvironment?'ANDROID NATIVE PLAYER':'SAMSUNG NATIVE PLAYER')")
 edit('js/inline-controls.js',"return global.tizen&&tizen.tvaudiocontrol;","return global.MovieBoxAndroidAudio || (global.tizen&&tizen.tvaudiocontrol);")
 edit('js/app.js',"if (global.tizen && tizen.application) tizen.application.getCurrentApplication().exit();", "if(global.MovieBoxAndroidBridge){global.MovieBoxAndroidBridge.exit();return;} if (global.tizen && tizen.application) tizen.application.getCurrentApplication().exit();")
-edit('js/app.js',"$('settings-platform').textContent = global.tizen ?", "$('settings-platform').textContent = global.MovieBoxAndroidEnvironment ? 'Android TV · Media3 native playback, Android keyboard and app-private storage.' : global.tizen ?")
+edit('js/app.js',"$('settings-platform').textContent = global.tizen ?", "$('settings-platform').textContent = global.MovieBoxAndroidEnvironment ? 'Android TV · Saved titles and subtitles stay on this TV.' : global.tizen ?")
 edit('js/app.js',"localStorage.setItem('moviebox-tv-library-backup',serialized);", "localStorage.setItem('moviebox-tv-library-backup',serialized);if(global.MovieBoxAndroidBridge)global.MovieBoxAndroidBridge.saveState(serialized);")
 edit('js/app.js',"global.MovieBoxTV =", "global.MovieBoxAndroidFlush=function(){if(player.active){saveProgress(player.position,player.duration);}persist(true);};\n  global.MovieBoxTV =")
-edit('js/releases.js',"REPOSITORY = 'emransm877/moviebox-tizen', VERSION = '0.9.3'", "REPOSITORY = 'emransm877/moviebox-android-tv', VERSION = '0.1.0'")
-for name in ['android-bootstrap.js','android-adapter.js']:
+edit('js/releases.js',"REPOSITORY = 'emransm877/moviebox-tizen', VERSION = '0.9.3'", "REPOSITORY = 'emransm877/moviebox-android-tv', VERSION = '"+json.loads((root/'release.json').read_text(encoding='utf-8'))['source_version']+"'")
+for name in ['android-preflight.js','android-bootstrap.js','android-adapter.js']:
     shutil.copyfile(root/'platform'/name,target/'js'/name)
 shutil.copyfile(root/'platform/android-platform.css',target/'css/android-platform.css')
 for record in records:

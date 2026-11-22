@@ -3,6 +3,17 @@
 Development began on 21 November 2026 (Asia/Dhaka). This document describes
 bounded checks, not a universal device certification.
 
+## 0.2.0 release artifact checks
+
+The 23 November release packages the already exercised20-theme shared interface
+with versionCode 2, the same application/signing identity and version-consistent
+native/shared update notices. Its native/shared functional source is unchanged
+from the preceding development candidate apart from version strings. Build,
+signature and asset checks are recorded against the staged 0.2.0 APK separately.
+The earlier API36 emulator results do not become physical-device certification or
+a fresh exact-artifact runtime result simply because the version was increased.
+See [release notes](RELEASE_NOTES_0.2.0.md).
+
 ## Published 0.1.0 signed artifact
 
 The non-debuggable release APK passed same-certificate instrumentation on the
@@ -70,7 +81,7 @@ TV compatibility or completed full-length live playback certification is claimed
 ## Before release
 
 - Re-run tests against the final signed APK and preserve its SHA-256.
-- Inspect all five themes for clipping, focus order and artwork identity.
+- Inspect all 20 themes for clipping, focus order and artwork identity.
 - Exercise real search, Movies/TV filters, subtitle discovery, audio selections,
   complete series transitions, cold restart and offline/rate-limited updates.
 - Verify remote navigation during slow and failed network/decoder operations.

@@ -1,5 +1,6 @@
 (function(global){
   'use strict';
+  if(global.MovieBoxAndroidUnsupported)return;
   var bridge=global.MovieBoxAndroidBridge;if(!bridge)return;
   global.MovieBoxAndroidEnvironment=JSON.parse(bridge.environment());
   try{
@@ -46,11 +47,21 @@
     var active=document.activeElement;
     var event=new KeyboardEvent(down?'keydown':'keyup',{key:key,bubbles:true,cancelable:true,repeat:!!repeat});
     (active||document).dispatchEvent(event);
+    // Synthetic Android key events have no browser default action for ranges.
+    // Keep explicit player seek handling above authoritative when it prevents default.
+    if(down&&!event.defaultPrevented&&active&&!active.disabled&&active.tagName==='INPUT'&&active.type==='range'&&(key==='ArrowLeft'||key==='ArrowRight')){
+      if(active.id==='volume-slider'){
+        var volumeStep=Number(global.MovieBoxAndroidEnvironment.volumeStep)||1;
+        active.value=Math.max(0,Math.min(100,Number(active.value)+(key==='ArrowLeft'?-volumeStep:volumeStep)));
+      }else if(key==='ArrowLeft')active.stepDown();else active.stepUp();
+      active.dispatchEvent(new Event('input',{bubbles:true}));
+      active.dispatchEvent(new Event('change',{bubbles:true}));
+    }
     if(down&&key==='Enter'&&!event.defaultPrevented&&active&&active.tagName==='BUTTON')active.click();
   };
   document.addEventListener('focusin',function(){var active=document.activeElement;bridge.textFocus(!!(active&&(active.tagName==='TEXTAREA'||active.tagName==='INPUT'&&!/^(range|checkbox|radio|button|submit)$/i.test(active.type))));});
   document.addEventListener('DOMContentLoaded',function(){
     var page=document.getElementById('player-page');
-    new MutationObserver(function(){var open=!page.hidden;document.documentElement.classList.toggle('android-video-open',open);document.documentElement.style.setProperty('background-color',open?'transparent':({obsidian:'#090e12',orbital:'#070f20',prism:'#100c20',aurora:'#edf3f0',eclipse:'#100e0b'})[document.documentElement.dataset.theme]||'#090e12','important');bridge.videoVisible(open);}).observe(page,{attributes:true,attributeFilter:['hidden']});
+    new MutationObserver(function(){var open=!page.hidden;document.documentElement.classList.toggle('android-video-open',open);document.documentElement.style.setProperty('background-color',open?'transparent':(global.MovieBoxThemes?global.MovieBoxThemes.record(document.documentElement.dataset.theme).palette.base:'#090e12'),'important');bridge.videoVisible(open);}).observe(page,{attributes:true,attributeFilter:['hidden']});
   });
 })(window);

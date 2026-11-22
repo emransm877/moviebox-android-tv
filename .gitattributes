@@ -4,3 +4,5 @@ gradlew text eol=lf
 *.png binary
 *.jar binary
 app/src/main/assets/tv-ui/** -text
+# Platform sources are copied byte-for-byte into the packaged frontend.
+platform/** -text

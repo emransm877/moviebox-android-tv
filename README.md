@@ -11,18 +11,21 @@ An independent community client. The installed app is named **MovieBox**.
 This is separate from the Android phone patch, Windows application and Samsung
 Tizen widget. It is not an official MovieBox release.
 
-![Actual shared Android TV home interface](docs/images/home.png)
+![MovieBox Android TV home with the shared 3D poster interface](docs/images/home.png)
+
+*Actual API36 Android TV emulator capture of the 20-theme development interface.
+Artwork comes from the service; physical Android TV hardware remains unverified.*
 
 ## Download and install
 
 | File | Version | Use |
 | --- | --- | --- |
-| [Android TV APK](https://github.com/emransm877/moviebox-android-tv/releases/download/v0.1.0/MovieBox-Android-TV-0.1.0.apk) | 0.1.0 | Signed, non-debuggable APK for Android TV / Google TV |
-| [SHA-256 checksum](https://github.com/emransm877/moviebox-android-tv/releases/download/v0.1.0/MovieBox-Android-TV-0.1.0.apk.sha256) | 0.1.0 | Verify the exact downloaded file |
+| [Android TV APK](https://github.com/emransm877/moviebox-android-tv/releases/download/v0.2.0/MovieBox-Android-TV-0.2.0.apk) | 0.2.0 | Signed, non-debuggable APK for Android TV / Google TV |
+| [SHA-256 checksum](https://github.com/emransm877/moviebox-android-tv/releases/download/v0.2.0/MovieBox-Android-TV-0.2.0.apk.sha256) | 0.2.0 | Verify the exact downloaded file |
 
 Transfer the APK to your TV, allow installation from your chosen file manager,
 then open it. MovieBox appears in the TV launcher. A PC can also install it using
-`adb install -r MovieBox-Android-TV-0.1.0.apk` after enabling the TV's developer
+`adb install -r MovieBox-Android-TV-0.2.0.apk` after enabling the TV's developer
 connection. Read the [installation and update guide](docs/INSTALLATION.md).
 
 - Android TV / Google TV; minimum Android 6.0 (API 23), with a current Android
@@ -35,8 +38,13 @@ connection. Read the [installation and update guide](docs/INSTALLATION.md).
 
 ## Features
 
+**Version 0.2.0** brings 20 visual themes with 3D poster layouts, compact Continue
+watching cards, a consistent sidebar and visual settings. The Samsung TV interface
+is shared while playback, keyboard, remote input and private storage stay native
+to Android. See the [release notes](docs/RELEASE_NOTES_0.2.0.md).
+
 - Shared TV home, title-specific artwork, featured carousel, Movies and TV Shows.
-- Desktop theme palettes: Obsidian, Orbital, Prism, Aurora and Eclipse.
+- Twenty theme palettes and 3D poster layouts preserve existing theme choices.
 - Remote arrows, OK and Back; native Android search keyboard.
 - Native Media3 fullscreen video behind the shared HTML controls.
 - Available quality and embedded-audio choices; safe separate alternate editions.
@@ -50,12 +58,17 @@ connection. Read the [installation and update guide](docs/INSTALLATION.md).
 
 ![Native Android playback with generated test video and subtitles](docs/images/player.png)
 
-*Actual runtime capture with generated media. Catalogue artwork belongs to its
-respective owners. A screenshot does not certify every device or source.*
+*Actual Android TV emulator playback capture using generated test media.
+Catalogue artwork belongs to its respective owners.*
+
+![Twenty theme choices in the Android TV settings](docs/images/settings.png)
+
+*Settings captured before the version-number bump; the pictured interface is
+shared by 0.2.0. These are genuine runtime images, not design mockups.*
 
 ## Known limits
 
-This first independent preview is not complete desktop/phone feature parity.
+This independent preview is not complete desktop/phone feature parity.
 Background-download management, local-video/file-picker integration and account
 flows still need platform work. Android WebView, codecs, remotes and TV models
 vary. The app cannot guarantee 1080p, subtitles or languages absent upstream.
@@ -67,11 +80,13 @@ placeholder media are excluded. Live-service availability may change.
 
 ## Validation and release identity
 
-The exact signed release APK was installed and exercised with native decoding,
-Android key events, seeking, subtitles, embedded audio, sparse episode autoplay,
-failed-source exit, navigation away during playback and cold-process persistence.
-See the [test target, evidence and limits](docs/VALIDATION.md). Physical TV models
-and minimum-version devices require additional validation.
+The 20-theme interface was exercised on an Android TV API36 emulator with native
+decoding, Android key events, seeking, subtitles, audio, sparse episode autoplay,
+failed-source exit and saved-state restoration. The 0.2.0 APK separately passed
+release build, seven unit tests, lint, signature and packaged-asset checks.
+See the [test target, evidence and limits](docs/VALIDATION.md). This version-only
+artifact did not receive a new full runtime run; physical TV models and minimum
+supported devices still need validation.
 
 - Application ID: `org.emransm.moviebox.tv`
 - Release certificate SHA-256:

@@ -15,7 +15,7 @@ upstream applications, service metadata, catalogue artwork, logos or trademarks.
   Source: https://github.com/google/guava .
 - Gradle wrapper files retain Gradle's upstream license notices.
   Source: https://github.com/gradle/gradle .
-- The five theme palettes and community brand assets are shared with the existing
+- The theme palettes and community brand assets are shared with the existing
   MovieBox Desktop/Tizen projects. Catalogue and promotional artwork are requested
   from their existing upstream URLs; no ownership of that artwork is claimed.
 - The native service adapter uses the same recovered public wire-protocol

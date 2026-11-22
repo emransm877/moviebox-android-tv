@@ -18,6 +18,11 @@ jobs:
           python-version: '3.12'
       - name: Check release identity and shared interface hashes
         run: python tools/check_release.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify legacy WebView preflight
+        run: node --test tests/preflight.test.cjs
       - uses: actions/setup-java@v4
         with:
           distribution: microsoft
@@ -35,9 +40,9 @@ jobs:
       - name: Stage development review files
         run: |
           mkdir -p artifacts
-          cp app/build/outputs/apk/debug/app-debug.apk artifacts/MovieBox-Android-TV-0.1.0-debug.apk
+          cp app/build/outputs/apk/debug/app-debug.apk artifacts/MovieBox-Android-TV-0.2.0-debug.apk
           cd artifacts
-          sha256sum MovieBox-Android-TV-0.1.0-debug.apk > SHA256SUMS.txt
+          sha256sum MovieBox-Android-TV-0.2.0-debug.apk > SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
           name: android-tv-development-review
