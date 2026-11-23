@@ -1,7 +1,5 @@
 name: Native Android TV checks
 on:
-  push:
-  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
@@ -11,6 +9,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -45,11 +44,13 @@ jobs:
           sha256sum MovieBox-Android-TV-0.2.0-debug.apk > SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
+          retention-days: 7
           name: android-tv-development-review
           path: artifacts/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
+          retention-days: 7
           name: android-tv-check-reports
           path: app/build/reports/
 
